@@ -108,3 +108,17 @@ public:
         }
     }
 };
+int main() {
+    ElevatorController controller(2); // Two elevators
+
+    controller.handleRequest(Request(0, 5)); // Request from floor 0 to floor 5
+    controller.handleRequest(Request(3, 7)); // Request from floor 3 to floor 7
+
+    // Simulate elevator operations
+    for (int i = 0; i < 10; ++i) {
+        controller.step();
+    }
+
+    return 0;
+}
+
